@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    </head>
+    <body>
+       
+
+          <div class="alert alert-info" role="alert">
+           <h1>Welcome to the coding challengers</h1>
+          </div>
+
+          <form method = "POST">
+              {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleInputEmail1">Username</label>
+              <input type="Username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "username">
+              
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" name = "password">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary" >Log-in</button>
+            
+            {% for message  in messages %}
+                <p id="messages">{{messages}}</p>
+                
+            {% endfor %}
+            
+          </form>
+  
+    </body>
+</html>
