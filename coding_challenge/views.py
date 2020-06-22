@@ -16,11 +16,11 @@ def log_in(request):
     if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
-        for users in range(len(data)):
-            if username == data[users]['username'] and password == data[users]['password']:
+        for user in range(len(data)):
+            if username == data[user]['username'] and password == data[user]['password']:
                 return redirect("home")
-            else:
-                messages.error(request, "Invalid details")
+           
+        messages.error(request, "Invalid details")
 
 
         
