@@ -1,3 +1,4 @@
+
 from django.shortcuts import render,redirect
 import json
 from django.http import HttpResponse
@@ -16,8 +17,8 @@ def log_in(request):
     if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
-        for users in range(len(data)):
-            if username == data[users]['username'] and password == data[users]['password']:
+        for user in range(len(data)):
+            if username == data[user]['username'] and password == data[user]['password']:
                 return redirect("home")
             else:
                 messages.error(request, "Invalid details")
@@ -26,4 +27,4 @@ def log_in(request):
         
     #
     return render(request, "index.html")
-# Create your views here.
+
