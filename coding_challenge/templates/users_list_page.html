@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content %}
+
+<div class="mt-4">
+{% for user in users %}
+
+<div class="card mt-4 mb-4">
+  <div class="card-body">
+    <h5 class="card-title">{{ user.username }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{user.email}}</h6>
+    <a href="{% url 'user_send_request' requesting_user_id task_id user.id %}" class="card-link">Duel</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock content %}
