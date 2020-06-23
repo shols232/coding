@@ -4,20 +4,14 @@
 
 <div class="mt-4">
 {% for task in tasks %}
-<br><br><br>
-<div id='content'>
-  <div class='row-fluid'>
-    <div class='span12' style='background-color:rgba(0, 0, 0, .8);'>
-      <div class='row-fluid'>
-        <div class='span4 offset4'>
 
-    <h4 class="card-title">{{ task.task }}</h4><br>
-    <h5 class="card-subtitle mb-2 text-muted">{{task.challenge}}</h5><br>
-    <a href="{% url 'users' user_id task.id %}" class="card-link">Send a challenge</a>
+<div class="card mt-4 mb-4">
+  <div class="card-body">
+    <h5 class="card-title">{{ task.task }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{task.challenge}}</h6>
+    <a href="{% url 'users' task.id %}" class="card-link">Send a challenge</a>
   </div>
 </div>
-    </div>
-  </div></div>
 
 {% endfor %}
 </div>

@@ -3,7 +3,7 @@
 {% block content %}
 <html>
     <head>
-        <title>Code Challenges</title>
+        <title>codeTrex</title>
 
         <style>
 
@@ -143,7 +143,8 @@ h3:hover {
         <div class='span4 offset4'>
           <br>
           <h1 class=' text-center' style='letter-spacing:4px'>
-           CODER'S CHALLENGES!
+            <center>
+            <h4>Welcome back, {{request.user.username}}</h4></center>
           </h1>
         </div>
       </div>
@@ -196,8 +197,7 @@ h3:hover {
           <h4>
               <center> All you have to do is get your hands dirty!</center>
           </h4><br><br>
-        <center> <button type="button" class="btn btn-secondary btn-lg">Login Now</button></button>
-        </center>
+      
         </div>
        
         <br>
@@ -260,21 +260,7 @@ h3:hover {
 
 </body>
 </html>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <h2>Challenge</h2>
-            <h4>Welcome back, {{request.user.username}}</h4>
-          </div>
-      </div>
-      <div class="container">
-      <div class="container">
-        <h2>Something Something...</h2>
-      </div>
-      <div class="container">
-        <h2>Something Here also</h2>
-      </div>
-      </div>
-      </div>
+
+            
 
 {% endblock content %}
