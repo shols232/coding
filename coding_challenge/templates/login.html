@@ -2,8 +2,13 @@
 {% load static%}
 {% block content %}
     <div>
+            {% if error%}
+                <div class="alert alert-danger" role="alert">
+                  {{error}}
+                </div>
+            {% endif %}
           <div class="alert alert-info" role="alert">
-           <h1>Welcome to the coding challengers</h1>
+           <h3>Welcome to the codeTrex</h3>
           </div>
 
           <form method = "POST">
@@ -18,12 +23,7 @@
               <input type="password" class="form-control" id="exampleInputPassword1" name = "password" />
               <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
             </div>
-            <button type="submit" class="btn btn-primary" >Log-in</button>
-
-            {% if error%}
-                <p class="messages">{{error}}</p>
-
-            {% endif %}
+            <button type="submit" class="btn btn-primary" >Log in</button>
           </form>
     </div>
 

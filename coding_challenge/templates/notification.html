@@ -4,12 +4,12 @@
 
 {% for notification in notifications %}
 
-<div class="card">
-  <div class="card-body mb-4">
+<div class="card mb-4">
+  <div class="card-body mb-2">
     <h6 class="card-title text-info">Request: {{ notification.status }}</h6>
-    <p class="card-text">{{notification.message}}</p>
-    <a href="{% url 'user_process_request' 2 notification.task_id 'accept' %}" class="card-link text-success">Accept</a>
-    <a href="{% url 'user_process_request' 2 notification.task_id 'decline' %}" class="card-link text-danger">Decline</a>
+    <p class="card-text">Hello, {{request.user.username }}.{{notification.message}}</p>
+    <a href="{% url 'user_process_request' notification.request_user_id notification.task_id 'accept' %}" class="card-link text-success">Accept</a>
+    <a href="{% url 'user_process_request' notification.request_user_id notification.task_id 'decline' %}" class="card-link text-danger">Decline</a>
   </div>
 </div>
 
