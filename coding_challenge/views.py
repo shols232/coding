@@ -4,6 +4,10 @@ from django.conf import settings
 
 static = settings.STATIC_URL
 
+
+def homepage(request):
+    #
+    return render(request, "home.html")
 def user_list_view(request,user_id, task_id):
 
     with open('static/users.json') as data_file:

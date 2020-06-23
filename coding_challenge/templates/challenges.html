@@ -1,16 +1,24 @@
 {% extends 'base.html'%}
 {% load static%}
 {% block content %}
-
+<br><br>
+<div id='content'>
+  <div class='row-fluid'>
+    
+          <br>
 <div class="mt-4">
- <h5 class="card-title">Your current duels</h5>
+ <h4 class="card-title">Your current duels</h4>
 {% for task in tasks %}
-<div class="card mt-4 mb-4">
-  <div class="card-body">
-    <h5 class="card-title">Language: {{ task.task }}</h5>
+<div class='span12' style='background-color:rgba(0, 0, 0, .8);'>
+  <div class='row-fluid'>
+    <div class='span4 offset4'>
+  
+    <h5 class="card-title">Language: {{ task.task }}</h5><br>
     <h6 class="card-subtitle mb-2 text-muted">challenge: {{task.challenge}}</h6>
   </div>
 </div>
+</div>
+<br>
 {% endfor %}
 </div>
 

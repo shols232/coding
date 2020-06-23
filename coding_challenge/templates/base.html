@@ -11,25 +11,36 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
 
     <title>Hello, world!</title>
+    <style>
+      html, body {
+  height: 100%;
+  margin: 0;
+  background: url(https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=749&q=80) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    </style>
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed">
         <div class="container">
-            <a class="navbar-brand mr-4" href="/">Django Blog</a>
+            <a class="navbar-brand mr-4" href="/"><h1 id="Logo">Django Blog</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="#">Home</a>
-                    <a class="nav-item nav-link" href="{% url 'notifications' 2 %}">Notifications</a>
-                    <a class="nav-item nav-link" href="{% url 'tasks' 2%}">tasks</a>
-                    <a class="nav-item nav-link" href="{% url 'challenges' 2%}">challenges</a>
+                    <a class="nav-item nav-link" href="/"><h3><b>Home</b></h3></a>
+                    <a class="nav-item nav-link" href="{% url 'notifications' 2 %}"><h3><b>Notifications</b></h3></a>
+                    <a class="nav-item nav-link" href="{% url 'tasks' 2%}"><h3><b>Tasks</b></h3></a>
+                    <a class="nav-item nav-link" href="{% url 'challenges' 2%}"><h3><b>Challenges</b></h3></a>
                 </div>
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">Login</a>
+                        <a class="nav-item nav-link" href="#"><b><h2>Login</h2></b></a>
                 </div>
             </div>
         </div>
