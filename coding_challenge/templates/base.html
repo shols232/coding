@@ -13,7 +13,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand mr-4" href="/">Django Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
@@ -22,14 +22,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="#">Home</a>
-                    <a class="nav-item nav-link" href="{% url 'notifications' 2 %}">Notifications</a>
-                    <a class="nav-item nav-link" href="{% url 'tasks' 2%}">tasks</a>
-                    <a class="nav-item nav-link" href="{% url 'challenges' 2%}">challenges</a>
+                    <a class="nav-item nav-link" href="{% url 'home'%}">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'notifications'%}">Notifications</a>
+                    <a class="nav-item nav-link" href="{% url 'tasks'%}">tasks</a>
+                    <a class="nav-item nav-link" href="{% url 'challenges'%}">challenges</a>
                 </div>
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">Login</a>
+                        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                 </div>
             </div>
         </div>

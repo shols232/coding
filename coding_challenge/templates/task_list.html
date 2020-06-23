@@ -9,7 +9,7 @@
   <div class="card-body">
     <h5 class="card-title">{{ task.task }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{task.challenge}}</h6>
-    <a href="{% url 'users' user_id task.id %}" class="card-link">Send a challenge</a>
+    <a href="{% url 'users' task.id %}" class="card-link">Send a challenge</a>
   </div>
 </div>
 
