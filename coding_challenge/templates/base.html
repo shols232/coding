@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
 
-    <title>Hello, world!</title>
+    <title>codeTrex</title>
     <style>
       html, body {
   height: 100%;
@@ -24,28 +24,37 @@
     </style>
   </head>
   <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed">
+
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-md navbar-transparent bg-primary mb-3">
         <div class="container">
-            <a class="navbar-brand mr-4" href="/"><h1 id="Logo">Django Blog</h1></a>
+            <a class="navbar-brand mr-4" href="/">codeTrex</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="/"><h3><b>Home</b></h3></a>
-                    <a class="nav-item nav-link" href="{% url 'notifications' 2 %}"><h3><b>Notifications</b></h3></a>
-                    <a class="nav-item nav-link" href="{% url 'tasks' 2%}"><h3><b>Tasks</b></h3></a>
-                    <a class="nav-item nav-link" href="{% url 'challenges' 2%}"><h3><b>Challenges</b></h3></a>
+                    <a class="nav-item nav-link" href="{% url 'home'%}">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'notifications'%}">Notifications</a>
+                    <a class="nav-item nav-link" href="{% url 'tasks'%}">tasks</a>
+                    <a class="nav-item nav-link" href="{% url 'challenges'%}">challenges</a>
                 </div>
                 <!-- Navbar Right Side -->
                 <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#"><b><h2>Login</h2></b></a>
+
+                    {% if request.user.is_authenticated%}
+                        <a class="nav-item nav-link" href="#">{{request.user.username}}</a>
+                        <a class="nav-item nav-link" href="{% url 'logout' %}">Log out</a>
+                    {% else %}
+                        <a class="nav-item nav-link" href="{% url 'login' %}">Log In</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </nav>
-  <main role="main" class="container mb-4">
+ 
     <div class="center mb-4">
         {% block content%}
 
@@ -58,3 +67,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
