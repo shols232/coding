@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content %}
+
+<div class="mt-4">
+ <h5 class="card-title">Your current duels</h5>
+{% for task in tasks %}
+<div class="card mt-4 mb-4">
+  <div class="card-body">
+    <h5 class="card-title">Language: {{ task.task }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted " style="black">challenge: {{task.challenge}}</h6>
+  </div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}

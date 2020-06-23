@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content %}
+
+{% if sent is not False%}
+
+<h2 class="text-primary text-center">You have already sent this user a request for this challenge</h2>
+
+{% elif sent is False %}
+
+<h2 class="text-primary text-center">Your request has been sent</h2>
+
+{% endif %}
+
+
+{% endblock content %}

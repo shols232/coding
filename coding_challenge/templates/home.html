@@ -1,0 +1,266 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block content %}
+<html>
+    <head>
+        <title>codeTrex</title>
+
+        <style>
+
+* {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+
+
+#content {
+  margin-top: 80px;
+  color: white;
+}
+
+.navbar-inner li {
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  border-top: 4px solid white;
+  transition: border-top .3s;
+}
+.nav-link:hover {
+  border-top: 4px solid dodgerblue;
+}
+
+.dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+  background-image: none;
+  background-color: dodgerblue;
+}
+
+.brand {
+  letter-spacing: 4px;
+  border-top: 4px solid white;
+  transition: border-top .3s;
+}
+.brand:hover {
+  border-top: 4px solid dodgerblue;
+}
+.brand:hover {
+  border-top: 4px solid dodgerblue;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.95);
+  /* remove the gradient */
+  background-image: none !important;
+  border-bottom: 2px solid dodgerblue !important;
+  line-height: 40px !important;
+  box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.footer {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  /* W3C */
+  /* remove the gradient */
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.center {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.triangle-down {
+  position: fixed;
+  margin-top: 65px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid dodgerblue;
+}
+
+.triangle-down p {
+  text-align: center;
+  color: white;
+  margin-top: -33px;
+  margin-left: -13px;
+  transition: color .2s;
+}
+.triangle-down p:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+h3 {
+  transition: color .5s;
+}
+h3:hover {
+  color: rgba(36, 142, 255, 0.8);
+}
+
+#big-cloud {
+  color: white;
+  opacity: .8;
+  font-size: 200px;
+  text-shadow: 1px 1px white, -1px -1px #666;
+}
+
+.dropdown-menu::before,
+.dropdown-menu::after {
+  border: none;
+  content: none !important;
+}
+
+.dropdown-menu {
+  border-radius: 3%;
+  z-index: -3;
+  margin-top: -10px;
+  margin-right: -60% !important;
+}
+
+.team-img {
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+        </style>
+    </head>
+    <body>
+        
+    
+
+     
+<div id='content'>
+  <div class='row-fluid'>
+    <div class='span12' style='background-color:rgba(0, 0, 0, .8);'>
+      <div class='row-fluid'>
+        <div class='span4 offset4'>
+          <br>
+          <h1 class=' text-center' style='letter-spacing:4px'>
+            <center>
+            <h4>Welcome back, {{request.user.username}}</h4></center>
+          </h1>
+        </div>
+      </div>
+      <div class='row-fluid'>
+        <div class='span4 offset4'>
+          <h1 class='threed text-center' style='letter-spacing:10px;margin-top:-30px;'>
+            ___________
+          </h1>
+        </div>
+      </div>
+      <div class='row-fluid'>
+        <div class='span6 text-right'>
+          <div class='row-fluid'>
+          </div>
+          <div class='row-fluid'>
+            <h2>
+                   <center> Learn With colleagues</center>
+            </h2>
+          </div>
+          <br>
+          <div class='row-fluid'>
+        
+          </div>
+        </div>
+        <div class='span6 text-left'>
+          <div class='span5 text-center'>
+            <i class='fa fa-cloud' id='big-cloud' style='text-shadow: 1px 1px white, -1px -1px #666;'></i>
+          </div>
+          <div class='span6 text-left'>
+           <Center> <h4>solve amazing challenges curated just for you!
+                Test your brain with cunning tasks and refresh your memory with intresting coding problems! </h4> <br> <br>
+            <h4>Challenge Your friends and show them your skills. Work together to make learning while solving problems even more fun!</h4></Center>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+  <br>
+  <div class='row-fluid'>
+    <div class='span12' style='background-color:rgba(0, 0, 0, .8);'>
+      <div class='span4'>
+        <div class='row-fluid'>
+          <h1 class=' text-center'>
+            Spike Up Your Coding Skills!
+          </h1><br>
+          <h4>
+            <center>  With over 20 robust challenges to play with.  </center>
+          </h4> <br><br>
+          <h4>
+              <center> All you have to do is get your hands dirty!</center>
+          </h4><br><br>
+      
+        </div>
+       
+        <br>
+      </div>
+      <div class='span8'>
+        <br>
+        <br>
+       
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class='row-fluid'>
+    <div class='span12' style='background-color:rgba(0, 0, 0, .8);'>
+      <div class='span6'>
+        <div class='row-fluid'>
+          <div class='span1 text-center'>
+            <h3>
+              &nbsp<i class="fa fa-skype text-left"></i>
+            </h3>
+          </div>
+          <div class='span11 >
+            
+          </div>
+        </div>
+        <div class='row-fluid'>
+          <div class='span1 text-center'>
+            <h3>
+              &nbsp<i class="fa fa-envelope text-left"></i>
+            </h3>
+          </div>
+          
+        </div>
+        <div class='row-fluid'>
+          <div class='span1 text-center'>
+            
+             <h3>Contact Us</h3>
+            
+             <br>
+             <h1>HNG</h1>
+            
+          </div>
+          <div class='span11 text-right'>
+          
+          </div>
+        </div>
+        <div class='row-fluid'>
+          <div class='span1 text-center'>
+           
+          </div>
+        
+        </div>
+      </div>
+      <div class='span6'>
+ 
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
+
+            
+
+{% endblock content %}
